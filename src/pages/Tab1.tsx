@@ -1,13 +1,21 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton,IonIcon } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
+import { arrowBackOutline } from 'ionicons/icons';
 import './Tab1.css';
+import { useHistory } from 'react-router';
 
 const Tab1: React.FC = () => {
+  const history = useHistory();
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
+        <IonButton  fill="clear" onClick={() => {  history.push('/');  }} >
+        <IonIcon slot="icon-only"  icon={arrowBackOutline}></IonIcon>
+        
+      </IonButton>
           <IonTitle>Tab 1</IonTitle>
+
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>

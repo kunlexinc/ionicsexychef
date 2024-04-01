@@ -1,11 +1,21 @@
 import React from 'react';
 import { IonContent, IonPage, IonItem, IonLabel, IonInput, IonButton } from '@ionic/react';
 import GreenButton from '../components/GreenButton'; // Adjust the path as necessary
+import { useHistory } from 'react-router';
+
 
 
 
 // Account Creation Form Component
 const CreateAccountForm = () => {
+   const history = useHistory();
+   
+  const handleClick = () => {
+  console.log("clicked")
+ 
+  history.push('/tab1'); // Navigate to the first tab
+};
+
   return (
     <IonPage>
       <IonContent>
@@ -35,7 +45,7 @@ const CreateAccountForm = () => {
             <IonLabel position="stacked">Referral code *</IonLabel>
             <IonInput type="text" />
           </IonItem>
-          <GreenButton text="Create your account" onClick={() => { console.log('Account creation logic here.'); }} />
+          <GreenButton text="Create your account" onClick={() => { handleClick() }} />
         </div>
       </IonContent>
     </IonPage>
