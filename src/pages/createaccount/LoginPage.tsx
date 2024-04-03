@@ -12,7 +12,9 @@ import {
   IonButtons,
   IonBackButton,
 } from '@ionic/react';
-import GreenButton from '../components/GreenButton';
+import GreenButton from '../../components/GreenButton';
+import { Link } from 'react-router-dom';
+import CreateAccountForm from './Signpage';
 
 const LoginPage: React.FC = () => {
   // Define state for email and password, handle changes and submission if needed
@@ -24,13 +26,16 @@ const LoginPage: React.FC = () => {
           <IonButtons slot="start">
             <IonBackButton defaultHref="/" />
           </IonButtons>
-          <IonTitle>Login</IonTitle>
+          {/* <IonTitle>Login</IonTitle> */}
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
+        <IonHeader>
+        <IonTitle>Login</IonTitle>
+        </IonHeader>
         <div style={{ maxWidth: '400px', margin: 'auto' }}>
-          <div style={{ marginBottom: '16px' }}>
-            Don't have an account? <a href="/Signpage">Register</a>
+          <div style={{ marginBottom: '20px' }}>
+            Don't have an account? <Link to="/signup">Register</Link>
           </div>
           <IonItem>
             <IonLabel position="floating">Email Address *</IonLabel>

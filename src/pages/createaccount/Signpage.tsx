@@ -1,13 +1,16 @@
 import React from 'react';
-import { IonContent, IonPage, IonItem, IonLabel, IonInput, IonButton } from '@ionic/react';
-import GreenButton from '../components/GreenButton'; // Adjust the path as necessary
+import { IonContent, IonPage, IonItem, IonLabel, IonInput, IonButton, IonHeader, IonToolbar, IonTitle } from '@ionic/react';
+import GreenButton from '../../components/GreenButton'; // Adjust the path as necessary
 import { useHistory } from 'react-router';
+import { arrowBackOutline } from 'ionicons/icons';
+import BackButton from '../../components/BackButton';
 
 
 
 
 // Account Creation Form Component
 const CreateAccountForm = () => {
+
    const history = useHistory();
    
   const handleClick = () => {
@@ -18,6 +21,16 @@ const CreateAccountForm = () => {
 
   return (
     <IonPage>
+
+<IonHeader>
+        <IonToolbar>
+          {/* <IonButtons slot="start">
+            <IonBackButton />
+          </IonButtons> */}
+            <BackButton fill="clear" slot="icon-only" icon={arrowBackOutline} onClick={() => {  history.push('/');  }} />
+         
+        </IonToolbar>
+      </IonHeader>
       <IonContent>
         <div className="create-account-form">
           <h1>Create your account</h1>

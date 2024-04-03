@@ -14,9 +14,12 @@ import { ellipse, square, triangle } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
-import SignupPage from '../src/pages/Signpage';
-import LoginPage from './pages/LoginPage';
+import SignupPage from './pages/createaccount/Signpage';
+import LoginPage from './pages/createaccount/LoginPage';
 import Tabroute from './pages/Tabroute';
+import PreferencesPage from './pages/createaccount/PreferencesPage';
+import LocationDetailsPage from './pages/createaccount/LocationDetailsPage';
+import Onboarding from './pages/onboarding/Onboarding';
 
 
 /* Core CSS required for Ionic components to work properly */
@@ -37,6 +40,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import VerifyAccountPage from './pages/createaccount/VerifyAccountPage';
 
 setupIonicReact();
 
@@ -45,11 +49,26 @@ const App: React.FC = () => (
     <IonReactRouter>
       {/* <IonTabs> */}
         {/* <IonRouterOutlet> */}
-                <Route exact path="/signup">
-            <SignupPage />
+            <Route exact path="/login">
+            <LoginPage />
           </Route>
           <Route exact path="/">
-            <Redirect to="/signup" />
+            <Redirect to="/login" />
+          </Route>
+          <Route exact path="/signup">
+          <SignupPage />
+          </Route>
+          <Route exact path="/verify">
+          <VerifyAccountPage />
+          </Route>
+          <Route exact path="/preference">
+          <PreferencesPage />
+          </Route>
+          <Route exact path="/location">
+          <LocationDetailsPage />
+          </Route>
+          <Route exact path="/onboarding">
+          <Onboarding />
           </Route>
           <Route exact path="/tab1">
           <Tabroute />

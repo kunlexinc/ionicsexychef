@@ -1,0 +1,51 @@
+/* Onboarding.css */
+.ion-padding {
+    padding: 16px;
+  }
+  
+  /* Heading styles for onboarding slides */
+  h2 {
+    font-size: 1.8em;
+    color: #000; /* Change this to match your design color */
+    padding-bottom: 8px;
+  }
+  
+  /* Paragraph styles for onboarding slides */
+  p {
+    font-size: 1em;
+    color: #666; /* Change this to match your design color */
+    padding-bottom: 24px;
+  }
+  
+  /* Override the ion-slide default padding */
+  ion-slide {
+    padding: 0;
+  }
+  
+  /* Style for the image container */
+  .ion-slide ion-img {
+    max-width: 100%;
+    border-radius: 12px; /* Adjust or remove if not needed */
+    margin-bottom: 24px; /* Spacing between image and text */
+  }
+  
+  /* Specific style for GreenButton component */
+  .green-button {
+    --background: #28ba62; /* Change this to the color of your button */
+    --border-radius: 8px;
+    margin-top: 32px; /* Space above the button */
+    height: 50px; /* Match the button height to your design */
+  }
+  
+  /* Style for the page indicator on the slides */
+  .swiper-pagination-bullet {
+    background: #c4c4c4; /* Inactive bullet color */
+    opacity: 1;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: #28ba62; /* Active bullet color */
+  }
+  
+  /* You may need additional custom styling depending on your exact Figma design */
+  
