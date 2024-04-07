@@ -1,10 +1,11 @@
 import React from 'react';
-import { IonContent, IonPage, IonItem, IonLabel, IonInput, IonButton, IonHeader, IonToolbar, IonTitle } from '@ionic/react';
+import { IonContent, IonPage, IonItem, IonLabel, IonInput, IonButton, IonHeader, IonToolbar, IonTitle, IonGrid, IonRow, IonCol } from '@ionic/react';
 import GreenButton from '../../components/GreenButton'; // Adjust the path as necessary
 import { useHistory } from 'react-router';
 import { arrowBackOutline } from 'ionicons/icons';
 import BackButton from '../../components/BackButton';
-
+import { Link } from 'react-router-dom';
+import './createaccount.css'
 
 
 
@@ -17,6 +18,12 @@ const CreateAccountForm = () => {
   console.log("clicked")
  
   history.push('/tab1'); // Navigate to the first tab
+};
+
+const doRegister = (event: any) => {
+  event.preventDefault();
+  console.log('doRegister');
+ // router.goBack();
 };
 
   return (
@@ -32,8 +39,19 @@ const CreateAccountForm = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <div className="create-account-form">
+        <IonGrid style={{ height: '100%' }} fixed>
+        <IonRow style={{ height: '16.666%' }}  class="ion-justify-content-center">
+          <IonCol style={{ justifyContent: 'center', alignItems:'center' }} class="ion-justify-content-center" size='12'>
           <h1>Create your account</h1>
+          <div style={{ marginBottom: '12px' }}>
+            Have an account? <Link to="/login">Login</Link>
+          </div>
+          </IonCol>
+        </IonRow>
+        <IonRow style={{ height: '83.333%' }}  class="ion-justify-content-center">
+        <IonCol size='12'>
+          <form onSubmit={doRegister} style={{height: '100%'}}>
+          <div style={{height: '80%'}}>  
           <IonItem>
             <IonLabel position="stacked">Phone number *</IonLabel>
             <IonInput type="tel" placeholder="+234" />
@@ -58,8 +76,15 @@ const CreateAccountForm = () => {
             <IonLabel position="stacked">Referral code *</IonLabel>
             <IonInput type="text" />
           </IonItem>
+          </div>
+          <div style={{height: '10%'}}>  
           <GreenButton text="Create your account" onClick={() => { handleClick() }} />
-        </div>
+         </div>
+          </form>
+          </IonCol>
+
+        </IonRow>
+        </IonGrid>
       </IonContent>
     </IonPage>
   );

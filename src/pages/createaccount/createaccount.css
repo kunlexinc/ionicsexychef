@@ -13,3 +13,12 @@ ion-input.verify {
     --padding-start: 10px;
     --padding-top: 10px; */
   }
+
+firstrow{
+    height: '16.666%';
+    border-color: blue;
+  }
+
+  secondrow{
+    height: '83.333%'
+  }

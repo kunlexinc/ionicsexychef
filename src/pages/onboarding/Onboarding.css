@@ -46,6 +46,51 @@
   .swiper-pagination-bullet-active {
     background: #28ba62; /* Active bullet color */
   }
+
+  .firstswiper {
+    background-image: url("../../../assets/boarding1.jpg");
+    /* background-color: #cccccc;  */
+    position: relative; /* Allows absolute positioning of elements inside */
+  height: 100vh; /* Full height of the viewport */
+  width: 100%; /* Full width */
+  
+  background-size: cover; /* Cover the entire space */
+  background-position: center; /* Center the background image */
+  }
+  .secondswiper {
+    background-image: url("../../../assets/boarding2.jpg");
+    /* background-color: #cccccc;  */
+    position: relative; /* Allows absolute positioning of elements inside */
+  height: 100vh; /* Full height of the viewport */
+  width: 100%; /* Full width */
+  
+  background-size: cover; /* Cover the entire space */
+  background-position: center; /* Center the background image */
+  }
+  .thirdswiper {
+    background-image: url("../../../assets/boarding3.jpg");
+    /* background-color: #cccccc;  */
+    position: relative; /* Allows absolute positioning of elements inside */
+  height: 100vh; /* Full height of the viewport */
+  width: 100%; /* Full width */
+  
+  background-size: cover; /* Cover the entire space */
+  background-position: center; /* Center the background image */
+  }
+
+  .overlay-text {
+    position: absolute; /* Position over the image */
+    bottom: 120px; /* Distance from the bottom */
+    left: 0;
+    width: 100%; /* Take up the full width of the image */
+    text-align: center; /* Center the text horizontally */
+    color: white; /* Text color */
+    padding: 0 20px; /* Padding on sides if needed */
+  }
+
+  .overlay-text .h1{
+    color: white;
+  }
   
   /* You may need additional custom styling depending on your exact Figma design */
   

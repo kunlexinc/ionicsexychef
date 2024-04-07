@@ -1,0 +1,16 @@
+/* HomePage.css */
+.special-offer-banner {
+    background-color: #fff; /* Replace with the actual color */
+    padding: 16px;
+    margin: 16px;
+    border-radius: 8px;
+    /* Add more styling here */
+  }
+  
+  /* Add styles for headings */
+  h2 {
+    padding: 16px;
+  }
+  
+  /* You may also need to customize the swiper and swiper-slide classes if necessary */
+  

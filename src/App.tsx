@@ -11,12 +11,12 @@ import {
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, square, triangle } from 'ionicons/icons';
-import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
+import Tab1 from './pages/tabs/Tab1';
+import Tab2 from './pages/tabs/Tab2';
+import Tab3 from './pages/tabs/Tab3';
 import SignupPage from './pages/createaccount/Signpage';
 import LoginPage from './pages/createaccount/LoginPage';
-import Tabroute from './pages/Tabroute';
+import Tabroute from './pages/tabs/Tabroute';
 import PreferencesPage from './pages/createaccount/PreferencesPage';
 import LocationDetailsPage from './pages/createaccount/LocationDetailsPage';
 import Onboarding from './pages/onboarding/Onboarding';
@@ -53,7 +53,7 @@ const App: React.FC = () => (
             <LoginPage />
           </Route>
           <Route exact path="/">
-            <Redirect to="/login" />
+            <Redirect to="/onboarding" />
           </Route>
           <Route exact path="/signup">
           <SignupPage />
@@ -77,6 +77,12 @@ const App: React.FC = () => (
           <Tabroute />
           </Route>
           <Route exact path="/tab3">
+          <Tabroute />
+          </Route>
+          <Route exact path="/tab4">
+          <Tabroute />
+          </Route>
+          <Route exact path="/tab5">
           <Tabroute />
           </Route>
           {/* <Route exact path="/tab2">

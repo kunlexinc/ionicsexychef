@@ -11,6 +11,10 @@ import {
   IonTitle,
   IonButtons,
   IonBackButton,
+  IonFooter,
+  IonRow,
+  IonCol,
+  IonGrid,
 } from '@ionic/react';
 import GreenButton from '../../components/GreenButton';
 import { Link } from 'react-router-dom';
@@ -30,13 +34,19 @@ const LoginPage: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
-        <IonHeader>
+      <IonGrid style={{ height: '100%' }} fixed>
+        <IonRow style={{ height: '30%' }}  class="ion-justify-content-center">
+          <IonCol style={{ justifyContent: 'center', alignItems:'center' }} class="ion-justify-content-center" size='12'>
         <IonTitle>Login</IonTitle>
-        </IonHeader>
-        <div style={{ maxWidth: '400px', margin: 'auto' }}>
-          <div style={{ marginBottom: '20px' }}>
+        <div style={{ marginBottom: '20px' }}>
             Don't have an account? <Link to="/signup">Register</Link>
           </div>
+        </IonCol>
+       </IonRow>
+       <IonRow style={{ height: '70%' }}>
+        <IonCol>
+        <div style={{ maxWidth: '400px', margin: 'auto' }}>
+          
           <IonItem>
             <IonLabel position="floating">Email Address *</IonLabel>
             <IonInput type="email" />
@@ -47,7 +57,11 @@ const LoginPage: React.FC = () => {
           </IonItem>
           <GreenButton text="Login" onClick={() => { console.log('Perform login'); }} />
         </div>
+        </IonCol>
+        </IonRow>
+        </IonGrid>
       </IonContent>
+        
     </IonPage>
   );
 };
