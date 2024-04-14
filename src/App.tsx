@@ -11,8 +11,8 @@ import {
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, square, triangle } from 'ionicons/icons';
-import Tab1 from './pages/tabs/Tab1';
-import Tab2 from './pages/tabs/Tab2';
+import Tab1 from './pages/tabs/Homepage';
+import Tab2 from './pages/tabs/FavoritesPage';
 import Tab3 from './pages/tabs/Tab3';
 import SignupPage from './pages/createaccount/Signpage';
 import LoginPage from './pages/createaccount/LoginPage';
@@ -41,6 +41,7 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import VerifyAccountPage from './pages/createaccount/VerifyAccountPage';
+import ChefProfileFullPage from './pages/chefinformation/ChefProfileFullPage';
 
 setupIonicReact();
 
@@ -70,10 +71,10 @@ const App: React.FC = () => (
           <Route exact path="/onboarding">
           <Onboarding />
           </Route>
-          <Route exact path="/tab1">
+          <Route exact path="/hometab">
           <Tabroute />
           </Route>
-          <Route exact path="/tab2">
+          <Route exact path="/favoritetab">
           <Tabroute />
           </Route>
           <Route exact path="/tab3">
@@ -84,6 +85,9 @@ const App: React.FC = () => (
           </Route>
           <Route exact path="/tab5">
           <Tabroute />
+          </Route>
+          <Route exact path="/chefprofile">
+          <ChefProfileFullPage />
           </Route>
           {/* <Route exact path="/tab2">
             <Tab2 />

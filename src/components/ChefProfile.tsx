@@ -14,10 +14,13 @@ type ChefProfileProps = {
 const ChefProfile: React.FC<ChefProfileProps> = ({ name, distance, rating, price, image }) => {
   return (
     <IonCard>
+        <div>
       <IonImg src={image} />
+      <IonIcon style={{position: "absolute", top:10, right:10,   }} size='medium' color='secondary' icon={heartOutline} />
+      </div>
       <IonCardHeader>
         <IonCardSubtitle>{distance} away</IonCardSubtitle>
-        <IonCardTitle>{name}</IonCardTitle>
+        <IonCardTitle style={{}}>{name}</IonCardTitle>
       </IonCardHeader>
       <IonCardContent>
         {price} / hr

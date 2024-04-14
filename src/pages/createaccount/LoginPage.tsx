@@ -39,7 +39,7 @@ const LoginPage: React.FC = () => {
           <IonCol style={{ justifyContent: 'center', alignItems:'center' }} class="ion-justify-content-center" size='12'>
         <IonTitle>Login</IonTitle>
         <div style={{ marginBottom: '20px' }}>
-            Don't have an account? <Link to="/signup">Register</Link>
+            Don't have an account? <Link to="/preference">Register</Link>
           </div>
         </IonCol>
        </IonRow>

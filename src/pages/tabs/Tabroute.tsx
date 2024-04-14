@@ -11,8 +11,8 @@ import {
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { images, square, triangle,  heartOutline, readerOutline, chatbubbleEllipsesOutline, homeOutline, personOutline, bookOutline } from 'ionicons/icons';
-import Tab1 from './Tab1';
-import Tab2 from './Tab2';
+import HomePage from './Homepage';
+import FavoritesPage from './FavoritesPage';
 import Tab3 from './Tab3';
 import Tab4 from './Tab4';
 import Tab5 from './Tab5';
@@ -24,11 +24,11 @@ const Tabroute: React.FC = () => (
     //   <IonReactRouter>
         <IonTabs>
           <IonRouterOutlet>
-            <Route exact path="/tab1">
-              <Tab1 />
+            <Route exact path="/hometab">
+              <HomePage />
             </Route>
-            <Route exact path="/tab2">
-              <Tab2 />
+            <Route exact path="/favoritetab">
+              <FavoritesPage />
             </Route>
             <Route path="/tab3">
               <Tab3 />
@@ -44,11 +44,11 @@ const Tabroute: React.FC = () => (
             </Route> */}
           </IonRouterOutlet>
           <IonTabBar slot="bottom">
-            <IonTabButton  tab="tab1" href="/tab1">
+            <IonTabButton  tab="hometab" href="/hometab">
               <IonIcon aria-hidden="true" icon={homeOutline} />
               <IonLabel>Home</IonLabel>
             </IonTabButton>
-            <IonTabButton tab="tab2" href="/tab2">
+            <IonTabButton tab="tab2" href="/favoritetab">
                         <IonIcon icon={heartOutline} />
                 <IonLabel>Favorite</IonLabel>
             </IonTabButton>

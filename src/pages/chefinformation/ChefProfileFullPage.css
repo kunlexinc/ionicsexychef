@@ -1,0 +1,17 @@
+/* ChefProfileFullPage.css */
+.chef-details {
+    padding: 16px;
+  }
+  
+  /* Style for chef name, experience, etc. */
+  h2 {
+    font-weight: bold;
+  }
+  
+  /* Style for the about section */
+  p {
+    font-size: 14px;
+  }
+  
+  /* Ensure to style the review component and buttons as per your design requirements */
+  

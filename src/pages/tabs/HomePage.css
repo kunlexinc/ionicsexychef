@@ -1,10 +1,22 @@
 /* HomePage.css */
 .special-offer-banner {
+  background-image: url("../../../assets/chef2.jpg");
     background-color: #fff; /* Replace with the actual color */
     padding: 16px;
     margin: 16px;
     border-radius: 8px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
     /* Add more styling here */
+  }
+
+  .special-offer-banner h2{
+    color: #fff;
+  }
+
+  .special-offer-banner p{
+    color: #fff;
   }
   
   /* Add styles for headings */
